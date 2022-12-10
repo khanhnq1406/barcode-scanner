@@ -4,4 +4,4 @@ pyzbar
 openpyxl
 pymodbus
 Pillow
-zbar
+pysqlite3 

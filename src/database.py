@@ -1,16 +1,16 @@
 import sqlite3
 
 '''Ket noi database'''
-conn=sqlite3.connect('info.db')
+conn=sqlite3.connect('/info.db')
 
 '''Tao cursor'''
 c=conn.cursor()
 
 '''Them phan tu'''
 # thanhpho=[
-#     ('893TDH191510','Ho Chi Minh'),
-#     ('893TDH191511','Khanh Hoa'),
-#     ('893TDH191512','Dong Nai')
+#     ('18CDT1SP1','Da Nang'),
+#     ('18CDT1SP2','Ha Noi'),
+#     ('18CDT1SP3','Ho Chi Minh')
 # ]
 
 # c.executemany("INSERT INTO thongtin VALUES (?,?)",thanhpho)
@@ -30,6 +30,7 @@ c=conn.cursor()
 c.execute("SELECT rowid,* FROM thongtin")
 
 items=c.fetchall()
+print (items)
 for item in items:
     print(item)
 conn.commit()
